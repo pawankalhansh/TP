@@ -1,29 +1,146 @@
+const playerBaseUrl = "https://dev.denver69.fun/TP/";
+
 const channels = [
-  { name: "Shirdi Sai Baba", language: "Hindi", category: "Spiritual", logo: "Darshan", type: "tata" },
-  { name: "Somnath Temple", language: "Hindi", category: "Spiritual", logo: "Darshan", type: "tata" },
-  { name: "Tata Play Fitness", language: "English", category: "Lifestyle", logo: "Fitness", type: "tata" },
-  { name: "Tata Play Beauty", language: "English", category: "Lifestyle", logo: "Beauty", type: "tata" },
-  { name: "Tata Play Cooking", language: "Hindi", category: "Lifestyle", logo: "Cooking", type: "tata" },
-  { name: "Tata Play Romance", language: "Hindi", category: "Movies", logo: "Romance", type: "tata" },
-  { name: "STAR Plus HD", language: "Hindi", category: "Drama", logo: "StarPlus HD", type: "star" },
-  { name: "Star Bharat HD", language: "Hindi", category: "Drama", logo: "Star Bharat HD", type: "star" },
-  { name: "SET HD", language: "Hindi", category: "Entertainment", logo: "SONY HD", type: "sony" },
-  { name: "SET", language: "Hindi", category: "Entertainment", logo: "SONY", type: "sony" },
-  { name: "Sony SAB HD", language: "Hindi", category: "Entertainment", logo: "SAB HD", type: "sony" },
-  { name: "Colors HD", language: "Hindi", category: "Drama", logo: "Colors HD", type: "news" },
-  { name: "Zee Cinema HD", language: "Hindi", category: "Movies", logo: "ZEE", type: "news" },
-  { name: "Star Gold HD", language: "Hindi", category: "Movies", logo: "Star Gold", type: "star" },
-  { name: "Tata Play South Talkies", language: "Hindi", category: "Action", logo: "South", type: "tata" },
-  { name: "Sony Max HD", language: "Hindi", category: "Movies", logo: "MAX HD", type: "sony" },
-  { name: "Discovery HD", language: "English", category: "Knowledge", logo: "Discovery", type: "news" },
-  { name: "National Geographic", language: "English", category: "Knowledge", logo: "NAT GEO", type: "news" },
-  { name: "Star Sports 1 HD", language: "Hindi", category: "Sports", logo: "Sports 1", type: "sports" },
-  { name: "Sony Sports TEN 1", language: "English", category: "Sports", logo: "TEN 1", type: "sports" },
-  { name: "ABP News", language: "Hindi", category: "News", logo: "ABP", type: "news" },
-  { name: "Aaj Tak HD", language: "Hindi", category: "News", logo: "Aaj Tak", type: "news" },
-  { name: "India Today", language: "English", category: "English News", logo: "India Today", type: "news" },
-  { name: "CNN News18", language: "English", category: "English News", logo: "CNN", type: "news" },
-  { name: "Zee Marathi HD", language: "Marathi", category: "Marathi", logo: "Marathi", type: "news" },
+  {
+    id: "840",
+    name: "Shirdi Sai Baba",
+    language: "Hindi",
+    category: "Spiritual",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-56386-kfc14w60-v4/imageContent-56386-kfc14w60-m4.png",
+  },
+  {
+    id: "842",
+    name: "Somnath Temple",
+    language: "Hindi",
+    category: "Spiritual",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-56389-kfdgngts-v3/imageContent-56389-kfdgngts-m3.png",
+  },
+  {
+    id: "121",
+    name: "Tata Play Fitness",
+    language: "English",
+    category: "Lifestyle",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-405-j5jr3sz4-v2/imageContent-405-j5jr3sz4-m2.png",
+  },
+  {
+    id: "618",
+    name: "Tata Play Beauty",
+    language: "English",
+    category: "Lifestyle",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12282-ja02jlp4-v2/imageContent-12282-ja02jlp4-m2.png",
+  },
+  {
+    id: "641",
+    name: "Tata Play Cooking",
+    language: "Hindi",
+    category: "Lifestyle",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-23495-jf92iycg-v3/imageContent-23495-jf92iycg-m4.png",
+  },
+  {
+    id: "959",
+    name: "Tata Play Romance",
+    language: "Hindi",
+    category: "Movies",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-67692-kwmxxw08-v2/imageContent-67692-kwmxxw08-m3.png",
+  },
+  {
+    id: "8",
+    name: "STAR Plus HD",
+    language: "Hindi",
+    category: "Drama",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-25307-jhrhflww-v1/imageContent-25307-jhrhflww-m1.png",
+  },
+  {
+    id: "244",
+    name: "Star Bharat HD",
+    language: "Hindi",
+    category: "Drama",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-6895-j6vqhqnc-v2/imageContent-6895-j6vqhqnc-m2.png",
+  },
+  {
+    id: "15",
+    name: "SET HD",
+    language: "Hindi",
+    category: "Entertainment",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-43-j5fca4k0-v3/imageContent-43-j5fca4k0-m4.png",
+  },
+  {
+    id: "556",
+    name: "SET",
+    language: "Hindi",
+    category: "Entertainment",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12074-j9oat6qw-v6/imageContent-12074-j9oat6qw-m6.png",
+  },
+  {
+    id: "48",
+    name: "SONY SAB HD",
+    language: "Hindi",
+    category: "Entertainment",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-141-j5fpeji0-v3/imageContent-141-j5fpeji0-m3.png",
+  },
+  {
+    id: "52",
+    name: "Colors HD",
+    language: "Hindi",
+    category: "Drama",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-155-j5frd2uo-v1/imageContent-155-j5frd2uo-m1.png",
+  },
+  {
+    id: "503",
+    name: "Zee Cinema HD",
+    language: "Hindi",
+    category: "Movies",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11915-j9l5clzs-v1/imageContent-11915-j9l5clzs-m1.png",
+  },
+  {
+    id: "80",
+    name: "SONY MAX HD",
+    language: "Hindi",
+    category: "Movies",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-243-j5fyl2f4-v3/imageContent-243-j5fyl2f4-m4.png",
+  },
+  {
+    id: "664",
+    name: "Star Sports 3",
+    language: "Hindi",
+    category: "Sports",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-31405-jm2isen4-v1/imageContent-31405-jm2isen4-m1.png",
+  },
+  {
+    id: "1392",
+    name: "Sadvidya",
+    language: "Gujarati",
+    category: "Spiritual",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/SADV_Thumbnail-v1/SADV_Thumbnail.png",
+  },
+  {
+    id: "1393",
+    name: "In24 Live News",
+    language: "Hindi",
+    category: "News",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/IN24LVNEWS_Thumbnail-v1/IN24LVNEWS_Thumbnail.png",
+  },
+  {
+    id: "1246",
+    name: "Vande Bharat News",
+    language: "Hindi",
+    category: "News",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/VANDEBHNEWS_Thumbnail-v1/VANDEBHNEWS_Thumbnail.png",
+  },
+  {
+    id: "1413",
+    name: "HIFF Movies",
+    language: "Hindi",
+    category: "Movies",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/HIFFM_Thumbnail-v1/HIFFM_Thumbnail.png",
+  },
+  {
+    id: "1446",
+    name: "Sanmarg TV",
+    language: "Hindi",
+    category: "Spiritual",
+    logoUrl: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/SanmargTV_Thumbnail-v1/SanmargTV_Thumbnail.png",
+  },
 ];
 
 const grid = document.querySelector("#channelGrid");
@@ -43,11 +160,11 @@ function saveFavorites() {
 }
 
 function logoMarkup(channel) {
-  if (channel.type === "tata") {
-    return `<div class="logo"><span><span class="mark">TATA<br />PLAY</span>${channel.logo}</span></div>`;
-  }
+  return `<img class="channel-logo-img" src="${channel.logoUrl}" alt="${channel.name}" loading="lazy" />`;
+}
 
-  return `<div class="logo ${channel.type}">${channel.logo}</div>`;
+function channelUrl(channel) {
+  return `${playerBaseUrl}${encodeURIComponent(channel.id)}`;
 }
 
 function heartIcon() {
@@ -67,15 +184,18 @@ function filteredChannels() {
 function renderChannels() {
   const visibleChannels = filteredChannels();
   grid.innerHTML = visibleChannels
-    .map((channel) => {
+    .map((channel, index) => {
       const isFavorite = favorites.includes(channel.name);
       return `
-        <article class="channel-card">
+        <article class="channel-card" data-index="${index}">
           <span class="live">LIVE</span>
           <button class="favorite ${isFavorite ? "active" : ""}" type="button" aria-label="Toggle ${channel.name} favorite" data-name="${channel.name}">
             ${heartIcon()}
           </button>
           <div class="logo-wrap">${logoMarkup(channel)}</div>
+          <span class="play-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7Z" /></svg>
+          </span>
           <div class="card-info">
             <h2>${channel.name}</h2>
             <p>${channel.language}</p>
@@ -109,7 +229,16 @@ navItems.forEach((item) => {
 
 grid.addEventListener("click", (event) => {
   const button = event.target.closest(".favorite");
-  if (!button) return;
+  if (!button) {
+    const card = event.target.closest(".channel-card");
+    if (!card) return;
+    const index = Number(card.dataset.index);
+    const channel = filteredChannels()[index];
+    if (channel) {
+      window.open(channelUrl(channel), "_blank", "noopener,noreferrer");
+    }
+    return;
+  }
 
   const channelName = button.dataset.name;
   favorites = favorites.includes(channelName)
