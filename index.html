@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP Binge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <button class="icon-button" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <h1>TP Binge <span>.</span></h1>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7.4 7.4 0 1 0 11.5 11.5Z" />
+        </svg>
+      </button>
+    </header>
+
+    <nav class="categories" aria-label="Channel categories">
+      <button class="chip active" data-filter="All" type="button">All</button>
+      <button class="chip" data-filter="Spiritual" type="button">Spiritual</button>
+      <button class="chip" data-filter="Lifestyle" type="button">Lifestyle</button>
+      <button class="chip" data-filter="Entertainment" type="button">Entertainment</button>
+      <button class="chip" data-filter="Movies" type="button">Movies</button>
+      <button class="chip" data-filter="Knowledge" type="button">Knowledge</button>
+      <button class="chip" data-filter="Drama" type="button">Drama</button>
+      <button class="chip" data-filter="Thriller" type="button">Thriller</button>
+      <button class="chip" data-filter="Action" type="button">Action</button>
+      <button class="chip" data-filter="Marathi" type="button">Marathi</button>
+      <button class="chip" data-filter="Hindi" type="button">Hindi</button>
+      <button class="chip" data-filter="Sports" type="button">Sports</button>
+      <button class="chip" data-filter="News" type="button">News</button>
+      <button class="chip" data-filter="English News" type="button">English News</button>
+    </nav>
+
+    <main class="screen">
+      <section class="search-panel" aria-label="Search channels">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m16.5 16.5 4 4" />
+          </svg>
+          <input id="searchInput" type="search" placeholder="Search channels" autocomplete="off" />
+        </div>
+      </section>
+
+      <section class="channel-grid" id="channelGrid" aria-live="polite"></section>
+      <p class="empty-state" id="emptyState">No channels found</p>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary">
+      <button class="nav-item active" data-view="home" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.8 12 3l9 7.8" />
+          <path d="M5 9.8V21h14V9.8" />
+          <path d="M9 21v-7h6v7" />
+        </svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" data-view="search" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m16.5 16.5 4 4" />
+        </svg>
+        <span>Search</span>
+      </button>
+      <button class="nav-item" data-view="favorites" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.8 5.9a5.1 5.1 0 0 0-7.2 0L12 7.5l-1.6-1.6a5.1 5.1 0 0 0-7.2 7.2L12 22l8.8-8.9a5.1 5.1 0 0 0 0-7.2Z" />
+        </svg>
+        <span>Favorites</span>
+      </button>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>
